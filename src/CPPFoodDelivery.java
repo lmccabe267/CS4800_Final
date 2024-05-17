@@ -32,7 +32,7 @@ public class CPPFoodDelivery {
     }
 
     public void listRestaurants() {
-        restaurants.forEach(restaurant -> System.out.println(restaurant.getName() + " - Cuisine: " + restaurant.getCuisineType() + " Hours: " + restaurant.getOpenTime() + " to " + restaurant.getCloseTime()));
+        restaurants.forEach(restaurant -> System.out.println(restaurant.getName() + " - Cuisine: " + restaurant.getCuisineType() + " Hours: " + restaurant.getOpenTime() + " to " + restaurant.getCloseTime() + " - County: " + restaurant.getCounty()));
     }
 
     public void placeOrder(Scanner scanner) {
@@ -113,10 +113,10 @@ public class CPPFoodDelivery {
         platform.registerRestaurant(r4);
 
         // Create and register drivers
-        Driver d1 = new Driver("John Doe", "111 Driver Lane", "LA County", LocalTime.of(8, 0), LocalTime.of(16, 0));
-        Driver d2 = new Driver("Jane Smith", "222 Driver Lane", "Orange County", LocalTime.of(16, 0), LocalTime.of(0, 0));
-        Driver d3 = new Driver("Jim Beam", "333 Driver Lane", "San Bernardino County", LocalTime.of(0, 0), LocalTime.of(8, 0));
-        Driver d4 = new Driver("Jill Hill", "444 Driver Lane", "LA County", LocalTime.of(8, 0), LocalTime.of(16, 0));
+        Driver d1 = new Driver("John Doe", "111 Driver Lane", "LA County", 1);
+        Driver d2 = new Driver("Jane Smith", "222 Driver Lane", "Orange County", 2);
+        Driver d3 = new Driver("Jim Beam", "333 Driver Lane", "San Bernardino County", 3);
+        Driver d4 = new Driver("Jill Hill", "444 Driver Lane", "LA County", 1);
         platform.registerDriver(d1);
         platform.registerDriver(d2);
         platform.registerDriver(d3);

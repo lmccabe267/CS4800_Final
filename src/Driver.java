@@ -1,26 +1,24 @@
 import java.time.LocalTime;
 
 public class Driver extends Person {
-    private LocalTime shiftStart;
-    private LocalTime shiftEnd;
+    private Shift shift;
 
-    public Driver(String name, String address, String county, LocalTime shiftStart, LocalTime shiftEnd) {
+    public Driver(String name, String address, String county, int shiftNumber) {
         super(name, address, county);
-        this.shiftStart = shiftStart;
-        this.shiftEnd = shiftEnd;
+        this.shift = new Shift(shiftNumber);
     }
 
     public boolean isAvailable() {
         LocalTime now = LocalTime.now();
-        return !now.isBefore(shiftStart) && !now.isAfter(shiftEnd);
+        return !now.isBefore(shift.getStart()) && !now.isAfter(shift.getEnd());
     }
 
 	public LocalTime getShiftStart() {
-		return shiftStart;
+		return shift.getStart();
 	}
 
 	public LocalTime getShiftEnd() {
-		return shiftEnd;
+		return shift.getEnd();
 	}
     
     

@@ -28,4 +28,17 @@ public class Order {
     public void setDeliveryTime() {
         this.deliveryTime = LocalDateTime.now();
     }
+    
+    private String getMealString() {
+    	String str = "";
+    	for(Meal meal: meals) {
+    		str += meal.getName() + "\n";
+    	}
+    	return str;
+    }
+    
+    public String toString() {
+    	String str = "Customer: " + customer.getName() + "\nRestaurant: " + restaurant.getName() + "\nMeals: " + getMealString() + "Driver: " + driver.getName();
+    	return str;
+    }
 }
