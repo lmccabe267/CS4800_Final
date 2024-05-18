@@ -117,10 +117,18 @@ public class CPPFoodDelivery {
         Driver d2 = new Driver("Jane Smith", "222 Driver Lane", "Orange County", 2);
         Driver d3 = new Driver("Jim Beam", "333 Driver Lane", "San Bernardino County", 3);
         Driver d4 = new Driver("Jill Hill", "444 Driver Lane", "LA County", 1);
+        Driver d5 = new Driver("Liam McCabe", "555 Driver Lane", "LA County", 1);
+        Driver d6 = new Driver("Brian Baker", "666 Driver Lane", "Orange Countyy", 2);
+        Driver d7 = new Driver("Estevan Delgado", "777 Driver Lane", "San Bernardino County", 3);
+        Driver d8 = new Driver("Michael Chon", "888 Driver Lane", "Orange County", 2);
         platform.registerDriver(d1);
         platform.registerDriver(d2);
         platform.registerDriver(d3);
         platform.registerDriver(d4);
+        platform.registerDriver(d5);
+        platform.registerDriver(d6);
+        platform.registerDriver(d7);
+        platform.registerDriver(d8);
 
         // Create and register customers
         Customer c1 = new Customer("Alice Wonderland", "123 Main St", "LA County", "None");
