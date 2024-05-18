@@ -41,7 +41,7 @@ public class CPPFoodDelivery {
             System.out.println((i + 1) + " - " + restaurants.get(i).getName());
         }
         int restaurantChoice = scanner.nextInt() - 1;
-        scanner.nextLine();  // Consume newline left-over
+        scanner.nextLine();
 
         Restaurant chosenRestaurant = restaurants.get(restaurantChoice);
         if (!chosenRestaurant.isOpen()) {
@@ -67,7 +67,7 @@ public class CPPFoodDelivery {
             System.out.println((i + 1) + " - " + customers.get(i).getName());
         }
         int customerChoice = scanner.nextInt() - 1;
-        scanner.nextLine();  // Consume newline left-over
+        scanner.nextLine();
 
         Customer chosenCustomer = customers.get(customerChoice);
 
@@ -85,7 +85,7 @@ public class CPPFoodDelivery {
             System.out.println((i + 1) + " - " + availableDrivers.get(i).getName());
         }
         int driverChoice = scanner.nextInt() - 1;
-        scanner.nextLine();  // Consume newline left-over
+        scanner.nextLine();
 
         Driver chosenDriver = availableDrivers.get(driverChoice);
 
@@ -139,17 +139,6 @@ public class CPPFoodDelivery {
         platform.registerCustomer(c2);
         platform.registerCustomer(c3);
         platform.registerCustomer(c4);
-
-        // Simulate order placements
-//        try {
-//            Meal[] meals = new Meal[]{new Meal("Burrito", new String[]{"Cheese", "Sour Cream"}, 30, 40, 20)};
-//            Order order = new Order(r1, c1, meals, d1);
-//            order.setPickUpTime();
-//            order.setDeliveryTime();
-//            System.out.println("Order placed successfully.");
-//        } catch (IllegalStateException e) {
-//            System.out.println(e.getMessage());
-//        }
         
         Scanner scanner = new Scanner(System.in);
 
@@ -164,7 +153,7 @@ public class CPPFoodDelivery {
             System.out.println("0 - Exit");
 
             int choice = scanner.nextInt();
-            scanner.nextLine();  // Consume newline left-over
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:

@@ -17,7 +17,7 @@ public class Restaurant extends Person {
         // Add Random Meals
         String[] mealNames = {"Pasta Bolognese", "Chicken Curry", "Vegetable Stir Fry", "Beef Tacos", "Salmon Salad", "Veggie Burger", "Shrimp Paella", "Lamb Kebabs", "Quinoa Salad", "Pork Schnitzel"};
         String[] allToppings = {"Cheese", "Olives", "Tomatoes", "Lettuce", "Onions", "Peppers", "Mushrooms", "Bacon", "Cilantro", "Avocado"};
-        Random random = new Random(); // Create a Random instance for index generation
+        Random random = new Random();
 
         for(int i = 0; i < 10; i++) {
             // Generate a random index and select a meal name
